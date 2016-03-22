@@ -1,0 +1,4 @@
+# Name of utility service
+spring:
+  application:
+    name: UTILITYSERVICEV1

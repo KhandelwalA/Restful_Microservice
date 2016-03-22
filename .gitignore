@@ -1,0 +1,11 @@
+.classpath
+.project
+.settings/
+target/
+desktop.ini
+*.class
+*.jar
+*.war
+*.ear
+logs/
+

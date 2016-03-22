@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://khandelwal.org",
+  "type": "object",
+  "properties": {
+    "RestResponse": {
+      "id": "http://khandelwal.org/RestResponse",
+      "type": "object",
+      "properties": {
+        "messages": {
+          "id": "http://khandelwal.org/RestResponse/messages",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://khandelwal.org/RestResponse/messages/0",
+              "type": "string"
+            },
+            {
+              "id": "http://khandelwal.org/RestResponse/messages/1",
+              "type": "string"
+            }
+          ],
+          "required": [
+            "0",
+            "1"
+          ]
+        },
+        "result": {
+          "id": "http://khandelwal.org/RestResponse/result",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://khandelwal.org/RestResponse/result/0",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "id": "http://khandelwal.org/RestResponse/result/0/name",
+                  "type": "string"
+                },
+                "alpha2_code": {
+                  "id": "http://khandelwal.org/RestResponse/result/0/alpha2_code",
+                  "type": "string"
+                },
+                "alpha3_code": {
+                  "id": "http://khandelwal.org/RestResponse/result/0/alpha3_code",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "id": "http://khandelwal.org/RestResponse/result/1",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "id": "http://khandelwal.org/RestResponse/result/1/name",
+                  "type": "string"
+                },
+                "alpha2_code": {
+                  "id": "http://khandelwal.org/RestResponse/result/1/alpha2_code",
+                  "type": "string"
+                },
+                "alpha3_code": {
+                  "id": "http://khandelwal.org/RestResponse/result/1/alpha3_code",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "messages",
+        "result"
+      ]
+    }
+  },
+  "required": [
+    "RestResponse"
+  ]
+}

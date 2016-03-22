@@ -1,0 +1,49 @@
+spring:
+  jmx:
+    default_domain: com.khandelwal.${service.version}
+    
+service: 
+  contextPath: utility-service-0.1
+  version: utility-service-0.1
+  id: utility-service
+  
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${service.contextPath}:${spring.application.instance_id:${random.value}}
+      serviceUrl: /${service.contextPath}/utility/{serviceName}/{searchText}
+    statusPageUrl: http://${eureka.client.hostname}:${server.port}/${service.contextPath}/info
+    healthCheckUrl: http://${eureka.client.hostname}:${server.port}/${service.contextPath}/health
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.server.hostname}:${eureka.server.port}/eureka/
+      
+country:
+  service:
+    weather:
+      appId: 44db6a862fba0b067b1930da0d769e98
+      url: http://api.openweathermap.org/data/2.5/forecast/daily?units=metric&cnt=7&appid=${country.service.weather.appId}&q=
+    isoCode:
+      url: http://services.groupkt.com/country/search?text=
+    postalCode:
+      url: http://api.geonames.org/postalCodeSearch?maxRows=20&username=demo&postalcode=
+    callingCode:
+      url: https://restcountries.eu/rest/v1/callingcode/91
+      
+endpoints:
+  jmx:
+    unique-names: true
+    enabled: true
+   
+      
+server:
+  port: 8093
+  
+logging:
+  file:  logs/weather-service-logs.logs
+  
+---
+spring:
+  profiles: dev
+  
+---
