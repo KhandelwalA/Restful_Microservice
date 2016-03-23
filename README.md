@@ -1,5 +1,4 @@
-# Restful_Microservice:This microservice is restful web service written in spring boot and implemented on the concept of netflix oss 
-  for Eurka server/client architecture
+# Restful_Microservice:This microservice is restful web service written in spring boot and implemented on the concept of netflix oss for Eurka server/client architecture
   
 # Technical objectives
 1. Show case micro service principle
